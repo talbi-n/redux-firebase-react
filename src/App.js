@@ -2,6 +2,8 @@ import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
 import Navbar from '../src/components/layouts/Navbar.js';
 import Dashbord from '../src/components/dashbord/Dashbord.js';
 import ProjectDetails from './components/projects/ProjectDetails.js';
+import SignIn from './components/auth/SignIn.js';
+import SignUp from './components/auth/SignUp.js';
 function App() {
   return (
     <BrowserRouter>
@@ -11,6 +13,8 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Dashbord />} />
           <Route path="/project/:id" element={<ProjectDetails />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
         </Routes>
       </div>
     </BrowserRouter>
